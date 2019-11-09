@@ -1,4 +1,4 @@
-package ParallelProgrammingLab4;
+package ParallelProgrammingLab4.StoreActor;
 
 import akka.actor.AbstractActor;
 
