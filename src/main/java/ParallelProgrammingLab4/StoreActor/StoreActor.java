@@ -6,6 +6,7 @@ import akka.japi.pf.ReceiveBuilder;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public class StoreActor extends AbstractActor {
     private Map<String, List<String>> store = new HashMap<>();
@@ -13,7 +14,7 @@ public class StoreActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(StoreMessage.class, m -> {
-                    List<String> list = store.getOrDefault(m.getKey());
+                    Optional<List<String>> list = store.getOrDefault(m.getKey());
                     store.put(m.getKey(), store.gem.getValue());
                     System.out.println("storeActor received message: " + m.toString());
                 })
