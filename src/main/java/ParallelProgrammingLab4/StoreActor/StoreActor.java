@@ -3,10 +3,7 @@ package ParallelProgrammingLab4.StoreActor;
 import akka.actor.AbstractActor;
 import akka.japi.pf.ReceiveBuilder;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 public class StoreActor extends AbstractActor {
     private Map<String, List<String>> store = new HashMap<>();
@@ -14,11 +11,14 @@ public class StoreActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(StoreMessage.class, m -> {
-                    Optional<List<String>> optionalList = Optional.of(store.get(m.getKey()));
+                    Optional<List<String>> optionalList = Optional.ofNullable(store.get(m.getKey()));
                     if (optionalList.isPresent()) {
-                        
+                        optionalList.get().add(m.getValue());
+                    } else {
+                        List<String> list = new LinkedList<>();
+                        list.add(m.getValue());
+                        store.put(m.getKey(), list);
                     }
-                    store.put(m.getKey(), store.gem.getValue());
                     System.out.println("storeActor received message: " + m.toString());
                 })
                 .match(GetMessage.class, req -> sender().tell(
