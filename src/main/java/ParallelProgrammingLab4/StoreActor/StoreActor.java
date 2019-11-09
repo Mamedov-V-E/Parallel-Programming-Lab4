@@ -14,7 +14,7 @@ public class StoreActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(StoreMessage.class, m -> {
-                    Optional<List<String>> list = store.getOrDefault(m.getKey());
+                    Optional<List<String>> optionalList = new Optional<>(store.get(m.getKey()));
                     store.put(m.getKey(), store.gem.getValue());
                     System.out.println("storeActor received message: " + m.toString());
                 })
