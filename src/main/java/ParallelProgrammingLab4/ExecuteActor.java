@@ -5,5 +5,8 @@ import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
 
 public class ExecuteActor extends AbstractActor {
 
-    
+    public Receive createReceive() {
+        return receiveBuilder().create()
+                .
+    }
 }
