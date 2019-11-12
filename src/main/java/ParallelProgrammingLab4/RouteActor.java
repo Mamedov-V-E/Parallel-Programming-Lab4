@@ -14,6 +14,6 @@ public class RouteActor extends AbstractActor {
     );
     private ActorRef executersPool = getContext().actorOf(
             new RoundRobinPool(EXECUTERS_NUMBER)
-            .props()
+            .props(Props)
     )
 }
