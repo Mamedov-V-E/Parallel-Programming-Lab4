@@ -1,6 +1,6 @@
 package ParallelProgrammingLab4;
 
-public class ExecuteMessage {
+public class ExecuteTestMessage {
     private String functionName;
     private String params;
 
@@ -11,7 +11,7 @@ public class ExecuteMessage {
         return this.params;
     }
 
-    public ExecuteMessage(String functionName, String params) {
+    public ExecuteTestMessage(String functionName, String params) {
 
     }
 }

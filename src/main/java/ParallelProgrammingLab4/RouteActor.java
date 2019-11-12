@@ -16,4 +16,9 @@ public class RouteActor extends AbstractActor {
             new RoundRobinPool(EXECUTERS_NUMBER)
             .props(Props.create(ExecuteActor.class))
     );
+
+    public Receive createReceive() {
+        return receiveBuilder().create()
+                .match()
+    }
 }
