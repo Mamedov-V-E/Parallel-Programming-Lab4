@@ -8,8 +8,8 @@ import akka.actor.Props;
 public class AkkaApp {
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create("testerSystem");
-        ActorRef storeActor = system.actorOf(
-                Props.create(StoreActor.class)
+        ActorRef routeActor = system.actorOf(
+                Props.create(RouteActor.class)
         );
     }
 }
