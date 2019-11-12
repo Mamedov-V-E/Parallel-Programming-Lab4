@@ -19,6 +19,8 @@ public class RouteActor extends AbstractActor {
 
     public Receive createReceive() {
         return receiveBuilder().create()
-                .match()
+                .match(TestFunctionMessage.class, m -> {
+                    
+                }).build();
     }
 }
