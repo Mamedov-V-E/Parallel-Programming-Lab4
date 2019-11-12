@@ -7,6 +7,8 @@ import java.util.*;
 
 public class StoreActor extends AbstractActor {
     private Map<String, List<String>> store = new HashMap<>();
+    private AbstractActor 
+
     @Override
     public Receive createReceive() {
         return ReceiveBuilder.create()
