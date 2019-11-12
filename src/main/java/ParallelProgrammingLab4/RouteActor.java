@@ -9,5 +9,5 @@ public class RouteActor extends AbstractActor {
     private ActorRef store = getContext().actorOf(
             Props.create(StoreActor.class)
     );
-    private
+    private ActorRef 
 }
