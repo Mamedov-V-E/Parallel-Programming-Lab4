@@ -1,5 +1,6 @@
 package ParallelProgrammingLab4;
 
+import akka.NotUsed;
 import akka.actor.ActorSystem;
 
 import java.net.http.HttpRequest;
@@ -12,5 +13,5 @@ public class MainHttp {
         this.system = system;
     }
 
-    public Flow<HttpRequest, HttpResponsecreateRoute
+    public Flow<HttpRequest, HttpResponse, NotUsedcreateRoute
 }
