@@ -27,8 +27,8 @@ public class ExecuteActor extends AbstractActor {
                     }
 
                     getContext().actorSelection(PATH_TO_STORE_ACTOR)
-                            .tell(new StoreMessage(func.getPackageId(), new Result(test.getTestName()
-                            )));
+                            .tell(new StoreMessage(func.getPackageId(), new Result(
+                                                                                test.getTestName())));
                 }).build();
     }
 }
