@@ -24,7 +24,7 @@ public class RouteActor extends AbstractActor {
 
                 })
                 .match(GetMessage.class, m -> {
-                    store.te
+                    store.forward(m, );
                 })
                 .build();
     }
