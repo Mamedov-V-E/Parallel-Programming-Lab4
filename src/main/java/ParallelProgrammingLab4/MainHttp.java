@@ -3,6 +3,7 @@ package ParallelProgrammingLab4;
 import akka.actor.ActorSystem;
 
 import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 public class MainHttp {
     private ActorSystem system;
@@ -11,5 +12,5 @@ public class MainHttp {
         this.system = system;
     }
 
-    public Flow<HttpRequestcreateRoute
+    public Flow<HttpRequest, HttpResponsecreateRoute
 }
