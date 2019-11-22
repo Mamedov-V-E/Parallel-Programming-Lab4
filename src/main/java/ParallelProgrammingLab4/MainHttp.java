@@ -32,7 +32,9 @@ public class MainHttp {
                             return completeOKWithFuture(result, Jackson.marshaller());
                 })),
                 post(() ->
-                        entity(Jackson.unmarshaller(TestFunctionMessage.class), ))
+                        entity(Jackson.unmarshaller(TestFunctionMessage.class), msg -> {
+                            
+                        }))
 
         );
     }
