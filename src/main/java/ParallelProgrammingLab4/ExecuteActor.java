@@ -30,6 +30,7 @@ public class ExecuteActor extends AbstractActor {
                             .tell(new StoreMessage(func.getPackageId(), new Result(
                                                                                 test.getTestName(),
                                                                                 test.getExpectedResult(),
+                                                                                result,
                                                                                 )));
                 }).build();
     }
