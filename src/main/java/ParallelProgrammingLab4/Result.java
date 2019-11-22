@@ -12,5 +12,38 @@ public class Result {
     private final String expectedResult;
     private final String result;
     private final boolean isSuccessful;
-    private
+    private final Object[] params;
+
+    public Result(String packageId, String testName, String expectedResult, String result, boolean isSuccessful, Object[] params) {
+        this.packageId = packageId;
+        this.testName = testName;
+        this.expectedResult = expectedResult;
+        this.result = result;
+        this.isSuccessful = isSuccessful;
+        this.params = params;
+    }
+
+    public String getPackageId() {
+        return packageId;
+    }
+
+    public String getTestName() {
+        return testName;
+    }
+
+    public String getExpectedResult() {
+        return expectedResult;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public boolean isSuccessful() {
+        return isSuccessful;
+    }
+
+    public Object[] getParams() {
+        return params;
+    }
 }

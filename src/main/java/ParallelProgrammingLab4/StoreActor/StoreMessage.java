@@ -1,24 +1,20 @@
 package ParallelProgrammingLab4.StoreActor;
 
+import ParallelProgrammingLab4.Result;
+
 public class StoreMessage {
-    private String key;
-    private String value;
+    private final String key;
+    private final Result result;
 
     public String getKey() {
         return this.key;
     }
-    public String getValue() {
-        return this.value;
+    public Result getResult() {
+        return this.result;
     }
 
-    public StoreMessage(String key, String value) {
+    public StoreMessage(String key, Result result) {
         this.key = key;
-        this.value = value;
+        this.result = result;
     }
-
-    @Override
-    public String toString() {
-        return this.key + this.value;
-    }
-
 }
