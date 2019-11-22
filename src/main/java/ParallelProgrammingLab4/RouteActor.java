@@ -21,10 +21,10 @@ public class RouteActor extends AbstractActor {
     public Receive createReceive() {
         return receiveBuilder().create()
                 .match(TestFunctionMessage.class, m -> {
-
+                    executersPool.tell();
                 })
                 .match(GetMessage.class, m -> {
-                    store.forward(m, );
+                    store.forward(m, getContext());
                 })
                 .build();
     }
