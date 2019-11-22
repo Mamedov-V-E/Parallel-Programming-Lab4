@@ -30,7 +30,7 @@ public class MainHttp {
                     Future<Object> result = Patterns.ask(system.actorSelection("store_actor"), new GetMessage(packageId), 10000);
                     return completeOKWithFuture(result, Jackson.marshaller());
                 })),
-                post()
+                post(() -> )
 
         );
     }
