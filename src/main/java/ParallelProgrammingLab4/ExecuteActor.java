@@ -13,9 +13,11 @@ public class ExecuteActor extends AbstractActor {
         return receiveBuilder().create()
                 .match(ExecuteTestMessage.class, m -> {
                     ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
-                    engine.eval(m.getFunction().getJsScript());
+                    Function func = m.getFunction();
+                    Test test = m.getTest();
+                    engine.eval(func.getJsScript());
                     Invocable invocable = (Invocable) engine;
-                    return invocable.invokeFunction(m.getFunction().getFunctionName(), m.getTest().getParams()).toString();
+                    return invocable.invokeFunction(func.getFunctionName(), test.getParams()).toString();
                 }).build();
     }
 }
