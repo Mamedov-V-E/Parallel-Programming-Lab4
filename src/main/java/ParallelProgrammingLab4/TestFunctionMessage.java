@@ -1,10 +1,10 @@
 package ParallelProgrammingLab4;
 
 public class TestFunctionMessage {
-    private String packageId;
-    private String jsScript;
-    private String functionName;
-    private Test[] tests;
+    private final String packageId;
+    private final String jsScript;
+    private final String functionName;
+    private final Test[] tests;
 
     public TestFunctionMessage(String packageId, String jsScript, String functionName, Test[] tests) {
         this.packageId = packageId;

@@ -1,8 +1,8 @@
 package ParallelProgrammingLab4;
 
 public class ExecuteTestMessage {
-    private TestFunctionMessage testFunctionMessage;
-    private Test test;
+    private final TestFunctionMessage testFunctionMessage;
+    private final Test test;
 
     public ExecuteTestMessage(TestFunctionMessage testFunctionMessage, Test test) {
         this.testFunctionMessage = testFunctionMessage;

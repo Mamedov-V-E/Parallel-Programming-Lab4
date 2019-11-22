@@ -1,9 +1,9 @@
 package ParallelProgrammingLab4;
 
 public class Test {
-    private String testName;
-    private String expectedResult;
-    private String params;
+    private final String testName;
+    private final String expectedResult;
+    private final String params;
 
     public Test(String testName, String expectedResult, String params) {
         this.testName = testName;
