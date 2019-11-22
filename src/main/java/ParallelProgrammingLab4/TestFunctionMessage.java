@@ -12,6 +12,5 @@ public class TestFunctionMessage {
         this.functionName = functionName;
         this.tests = tests;
     }
-    
 
 }
