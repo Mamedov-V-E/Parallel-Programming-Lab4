@@ -1,5 +1,6 @@
 package ParallelProgrammingLab4;
 
+import ParallelProgrammingLab4.StoreActor.GetMessage;
 import ParallelProgrammingLab4.StoreActor.StoreActor;
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
@@ -21,6 +22,10 @@ public class RouteActor extends AbstractActor {
         return receiveBuilder().create()
                 .match(TestFunctionMessage.class, m -> {
 
-                }).build();
+                })
+                .match(GetMessage.class, m -> {
+                    store.te
+                })
+                .build();
     }
 }
