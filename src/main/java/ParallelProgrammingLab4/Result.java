@@ -6,25 +6,18 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @JsonAutoDetect
 public class Result {
 
-    @JsonIgnore
-    private final String packageId;
     private final String testName;
     private final String expectedResult;
     private final String result;
     private final boolean isSuccessful;
     private final Object[] params;
 
-    public Result(String packageId, String testName, String expectedResult, String result, boolean isSuccessful, Object[] params) {
-        this.packageId = packageId;
+    public Result(String testName, String expectedResult, String result, boolean isSuccessful, Object[] params) {
         this.testName = testName;
         this.expectedResult = expectedResult;
         this.result = result;
         this.isSuccessful = isSuccessful;
         this.params = params;
-    }
-
-    public String getPackageId() {
-        return packageId;
     }
 
     public String getTestName() {

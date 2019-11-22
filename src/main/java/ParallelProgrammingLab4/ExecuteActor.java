@@ -1,5 +1,6 @@
 package ParallelProgrammingLab4;
 
+import ParallelProgrammingLab4.StoreActor.StoreMessage;
 import akka.actor.AbstractActor;
 import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
 
@@ -25,7 +26,8 @@ public class ExecuteActor extends AbstractActor {
                         result = "ERROR";
                     }
 
-
+                    getContext().actorSelection(PATH_TO_STORE_ACTOR)
+                            .tell(new StoreMessage());
                 }).build();
     }
 }
