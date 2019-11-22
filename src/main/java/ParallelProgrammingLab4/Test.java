@@ -1,5 +1,8 @@
 package ParallelProgrammingLab4;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+@JsonAutoDetect
 public class Test {
     private final String testName;
     private final String expectedResult;
