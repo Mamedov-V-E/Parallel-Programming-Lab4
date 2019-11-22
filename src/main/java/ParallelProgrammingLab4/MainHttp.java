@@ -1,5 +1,7 @@
 package ParallelProgrammingLab4;
 
+import ParallelProgrammingLab4.StoreActor.GetMessage;
+import ParallelProgrammingLab4.StoreActor.ReturnByKeyMessage;
 import ParallelProgrammingLab4.StoreActor.StoreActor;
 import akka.NotUsed;
 import akka.actor.ActorSystem;
@@ -25,7 +27,7 @@ public class MainHttp {
         return route(
                 get(() -> {
                     parameter("packageId", packageId -> {
-                        Future<Object> result = Patterns.ask(system.actorSelection("store_actor") )
+                        Future<Object> result = Patterns.ask(system.actorSelection("store_actor"), new GetMessage(packageId))
                     })
                 }),
 
