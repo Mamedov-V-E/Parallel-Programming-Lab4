@@ -7,6 +7,8 @@ public class ExecuteActor extends AbstractActor {
 
     public Receive createReceive() {
         return receiveBuilder().create()
-                .match()
+                .match(ExecuteTestMessage.class, m -> {
+                    
+                }).build();
     }
 }

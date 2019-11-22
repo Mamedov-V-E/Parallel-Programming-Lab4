@@ -22,8 +22,9 @@ public class RouteActor extends AbstractActor {
         return receiveBuilder().create()
                 .match(TestFunctionMessage.class, m -> {
                     for (Test test : m.getTests()) {
-                        executersPool.tell(new ExecuteTestMessage(m.getFunction(),
-                                            ));
+                        executersPool.tell(new ExecuteTestMessage(
+                                            m.getFunction(),
+                                            test), getSelf());
                     }
                 })
                 .match(GetMessage.class, m -> {
