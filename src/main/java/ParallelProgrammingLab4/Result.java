@@ -9,6 +9,7 @@ public class Result {
     @JsonIgnore
     private final String packageId;
     private final String testName;
+    private final String expected
     private final boolean isSuccessful;
     private
 }
