@@ -12,12 +12,13 @@ import akka.http.javadsl.model.HttpResponse;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
+import java.io.IOException;
 import java.net.http.HttpRequest;
 import java.rmi.server.ExportException;
 import java.util.concurrent.CompletionStage;
 
 public class AkkaApp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         ActorSystem system = ActorSystem.create("testerSystem");
         ActorRef routeActor = system.actorOf(
                 Props.create(RouteActor.class)
