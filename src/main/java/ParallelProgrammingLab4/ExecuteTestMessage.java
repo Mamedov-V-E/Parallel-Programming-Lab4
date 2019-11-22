@@ -2,13 +2,11 @@ package ParallelProgrammingLab4;
 
 public class ExecuteTestMessage {
     private TestFunctionMessage testFunctionMessage;
+    private Test test;
 
-
-    public ExecuteTestMessage(TestFunctionMessage testFunctionMessage, String testName, String expectedResult, String params) {
+    public ExecuteTestMessage(TestFunctionMessage testFunctionMessage, Test test) {
         this.testFunctionMessage = testFunctionMessage;
-        this.testName = testName;
-        this.expectedResult = expectedResult;
-        this.params = params;
+        this.test = test;
     }
 
     public TestFunctionMessage getTestFunctionMessage() {
@@ -17,5 +15,13 @@ public class ExecuteTestMessage {
 
     public void setTestFunctionMessage(TestFunctionMessage testFunctionMessage) {
         this.testFunctionMessage = testFunctionMessage;
+    }
+
+    public Test getTest() {
+        return test;
+    }
+
+    public void setTest(Test test) {
+        this.test = test;
     }
 }
