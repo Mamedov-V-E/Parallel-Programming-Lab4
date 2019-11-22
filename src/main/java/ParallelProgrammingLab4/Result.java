@@ -1,5 +1,6 @@
 package ParallelProgrammingLab4;
 
 public class Result {
-    private final 
+    private final String packageId;
+    private final
 }
