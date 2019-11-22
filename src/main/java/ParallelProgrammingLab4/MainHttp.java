@@ -5,6 +5,7 @@ import ParallelProgrammingLab4.StoreActor.ReturnByKeyMessage;
 import ParallelProgrammingLab4.StoreActor.StoreActor;
 import akka.NotUsed;
 import akka.actor.ActorSystem;
+import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.http.javadsl.server.Route;
 import akka.pattern.Patterns;
 import akka.stream.javadsl.Flow;
@@ -28,7 +29,7 @@ public class MainHttp {
                 get(() -> {
                     parameter("packageId", packageId -> {
                         Future<Object> result = Patterns.ask(system.actorSelection("store_actor"), new GetMessage(packageId), 10000);
-                        return
+                        return completeOKWithFuture(result, Jackson.marshaller());
                     })
                 }),
 
