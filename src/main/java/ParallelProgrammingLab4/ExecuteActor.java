@@ -8,7 +8,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
 public class ExecuteActor extends AbstractActor {
-
+    private final
     public Receive createReceive() {
         return receiveBuilder().create()
                 .match(ExecuteTestMessage.class, m -> {
