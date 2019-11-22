@@ -1,16 +1,16 @@
 package ParallelProgrammingLab4;
 
 public class ExecuteTestMessage {
-    private final TestFunctionMessage testFunctionMessage;
+    private final Function function;
     private final Test test;
 
-    public ExecuteTestMessage(TestFunctionMessage testFunctionMessage, Test test) {
-        this.testFunctionMessage = testFunctionMessage;
+    public ExecuteTestMessage(Function function, Test test) {
+        this.function = function;
         this.test = test;
     }
 
-    public TestFunctionMessage getTestFunctionMessage() {
-        return testFunctionMessage;
+    public Function getFunction() {
+        return function;
     }
 
     public Test getTest() {
