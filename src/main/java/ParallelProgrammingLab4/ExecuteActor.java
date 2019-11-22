@@ -22,7 +22,7 @@ public class ExecuteActor extends AbstractActor {
                         Invocable invocable = (Invocable) engine;
                         result = invocable.invokeFunction(func.getFunctionName(), test.getParams()).toString();
                     } catch (Exception e) {
-                        
+                        result = "ERROR";
                     }
                 }).build();
     }
