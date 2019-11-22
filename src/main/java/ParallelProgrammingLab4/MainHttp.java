@@ -4,6 +4,7 @@ import ParallelProgrammingLab4.StoreActor.GetMessage;
 import ParallelProgrammingLab4.StoreActor.ReturnByKeyMessage;
 import ParallelProgrammingLab4.StoreActor.StoreActor;
 import akka.NotUsed;
+import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.http.javadsl.server.Route;
@@ -33,7 +34,8 @@ public class MainHttp {
                 })),
                 post(() ->
                         entity(Jackson.unmarshaller(TestFunctionMessage.class), msg -> {
-                            system.actorSelection("route_actor").tell(msg);
+                            system.actorSelection("route_actor").tell(msg, ActorRef.noSender());
+                            return 
                         }))
 
         );
