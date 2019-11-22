@@ -9,10 +9,10 @@ import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.http.javadsl.server.Route;
 import akka.pattern.Patterns;
 import akka.stream.javadsl.Flow;
+import scala.concurrent.Future;
 
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.concurrent.Future;
 import java.util.regex.Pattern;
 
 import static akka.http.javadsl.server.Directives.*;
@@ -28,8 +28,8 @@ public class MainHttp {
         return route(
                 get(() -> {
                     parameter("packageId", packageId -> {
-                        Future<Object> result = Patterns.ask(system.actorSelection("store_actor").anchor(), new GetMessage(packageId), 10000);
-                        return completeOKWithFuture(result, );
+                        Future<Object> result = Patterns.ask(system.actorSelection("store_actor"), new GetMessage(packageId), 10000);
+                        return completeOKWithFuture(result, Jackson.marshaller());
                     })
                 }),
 
