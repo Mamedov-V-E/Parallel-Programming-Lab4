@@ -2,5 +2,5 @@ package ParallelProgrammingLab4;
 
 public class Result {
     private final String packageId;
-    private final
+    private final String testName 
 }
