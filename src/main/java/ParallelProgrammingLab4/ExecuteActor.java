@@ -32,7 +32,8 @@ public class ExecuteActor extends AbstractActor {
                                                                                 test.getExpectedResult(),
                                                                                 result,
                                                                                 result.equals(test.getExpectedResult()),
-                                                                                )));
+                                                                                test.getParams())),
+                                    self());
                 }).build();
     }
 }
