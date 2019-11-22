@@ -21,7 +21,8 @@ public class AkkaApp {
     public static void main(String[] args) throws IOException {
         ActorSystem system = ActorSystem.create("testerSystem");
         ActorRef routeActor = system.actorOf(
-                Props.create(RouteActor.class)
+                Props.create(RouteActor.class),
+                "routeActor"
         );
 
         final Http http = Http.get(system);
