@@ -28,7 +28,7 @@ public class MainHttp {
                 get(() -> {
                     parameter("packageId", packageId -> {
                         Future<Object> result = Patterns.ask(system.actorSelection("store_actor"), new GetMessage(packageId), 10000);
-                        return 
+                        return
                     })
                 }),
 
