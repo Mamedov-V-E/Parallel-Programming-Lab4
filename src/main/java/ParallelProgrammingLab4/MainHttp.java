@@ -26,8 +26,7 @@ public class MainHttp {
 
     public Route createRoute() {
         return route(
-                get(() ->
-                        parameter("packageId", packageId -> {
+                get(() -> parameter("packageId", packageId -> {
                     Future<Object> result = Patterns.ask(system.actorSelection("store_actor"), new GetMessage(packageId), 10000);
                     return completeOKWithFuture(result, Jackson.marshaller());
                 })),
