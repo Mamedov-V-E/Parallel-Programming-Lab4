@@ -8,6 +8,7 @@ import akka.stream.javadsl.Flow;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+import static akka.http.javadsl.server.Directives.path;
 import static akka.http.javadsl.server.Directives.route;
 
 public class MainHttp {
@@ -19,7 +20,7 @@ public class MainHttp {
 
     public Route createRoute(ActorSystem system) {
         return route(
-                
+                path()
         );
     }
 }
