@@ -20,8 +20,8 @@ public class ExecuteActor extends AbstractActor {
                     try {
                         engine.eval(func.getJsScript());
                         Invocable invocable = (Invocable) engine;
+                        result = invocable.invokeFunction(func.getFunctionName(), test.getParams()).toString();
                     }
-                    return invocable.invokeFunction(func.getFunctionName(), test.getParams()).toString();
                 }).build();
     }
 }
