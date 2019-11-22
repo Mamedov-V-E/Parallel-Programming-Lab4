@@ -25,4 +25,7 @@ public class TestFunctionMessage {
         return functionName;
     }
 
+    public Test[] getTests() {
+        return tests;
+    }
 }

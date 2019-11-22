@@ -21,7 +21,9 @@ public class RouteActor extends AbstractActor {
     public Receive createReceive() {
         return receiveBuilder().create()
                 .match(TestFunctionMessage.class, m -> {
-                    for
+                    for (Test test : m.getTests()) {
+                        executersPool.tell(new ExecuteTestMessage());
+                    }
                 })
                 .match(GetMessage.class, m -> {
                     store.forward(m, getContext());
