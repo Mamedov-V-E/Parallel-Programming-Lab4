@@ -17,24 +17,12 @@ public class TestFunctionMessage {
         return packageId;
     }
 
-    public void setPackageId(String packageId) {
-        this.packageId = packageId;
-    }
-
     public String getJsScript() {
         return jsScript;
     }
 
-    public void setJsScript(String jsScript) {
-        this.jsScript = jsScript;
-    }
-
     public String getFunctionName() {
         return functionName;
-    }
-
-    public void setFunctionName(String functionName) {
-        this.functionName = functionName;
     }
 
 }

@@ -13,15 +13,7 @@ public class ExecuteTestMessage {
         return testFunctionMessage;
     }
 
-    public void setTestFunctionMessage(TestFunctionMessage testFunctionMessage) {
-        this.testFunctionMessage = testFunctionMessage;
-    }
-
     public Test getTest() {
         return test;
-    }
-
-    public void setTest(Test test) {
-        this.test = test;
     }
 }
