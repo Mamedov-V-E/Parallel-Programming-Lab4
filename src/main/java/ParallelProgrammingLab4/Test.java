@@ -3,9 +3,9 @@ package ParallelProgrammingLab4;
 public class Test {
     private final String testName;
     private final String expectedResult;
-    private final String params;
+    private final Object[] params;
 
-    public Test(String testName, String expectedResult, String params) {
+    public Test(String testName, String expectedResult, Object[] params) {
         this.testName = testName;
         this.expectedResult = expectedResult;
         this.params = params;
@@ -19,7 +19,7 @@ public class Test {
         return expectedResult;
     }
 
-    public String getParams() {
+    public Object[] getParams() {
         return params;
     }
 }
