@@ -25,7 +25,7 @@ public class MainHttp {
         return route(
                 get(() -> {
                     parameter("packageId", packageId -> {
-                        Future<Object> result = Patterns.ask(system.actorSelection("") )
+                        Future<Object> result = Patterns.ask(system.actorSelection("store_actor") )
                     })
                 }),
 
