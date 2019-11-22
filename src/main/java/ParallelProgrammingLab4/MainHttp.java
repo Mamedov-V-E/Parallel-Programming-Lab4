@@ -35,7 +35,7 @@ public class MainHttp {
                 post(() ->
                         entity(Jackson.unmarshaller(TestFunctionMessage.class), msg -> {
                             system.actorSelection("route_actor").tell(msg, ActorRef.noSender());
-                            return 
+                            return complete("Function test started\n");
                         }))
 
         );
