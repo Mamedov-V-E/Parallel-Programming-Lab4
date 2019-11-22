@@ -29,7 +29,7 @@ public class MainHttp {
                 get(() -> {
                     parameter("packageId", packageId -> {
                         Future<Object> result = (Future<Object>) Patterns.ask(system.actorSelection("store_actor"), new GetMessage(packageId), 10000);
-                        return completeOKWithFuture(result, Jackson.marshaller());
+                        return completeOKWithFuture(result, );
                     })
                 }),
 
