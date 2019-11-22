@@ -13,6 +13,7 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
 import java.net.http.HttpRequest;
+import java.rmi.server.ExportException;
 import java.util.concurrent.CompletionStage;
 
 public class AkkaApp {
@@ -31,6 +32,10 @@ public class AkkaApp {
                 ConnectHttp.toHost("localhost", 8080),
                 materializer
         );
-        System.out.println();
+        System.out.println("Server online at http://localhost:8080/\nPress RETURN to stop...");
+        System.in.read();
+        binding
+                .thenCompose(ServerBinding::unbind)
+                .thenAccept(unbound -> system.terminate());
     }
 }
