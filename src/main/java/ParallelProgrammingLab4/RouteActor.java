@@ -11,7 +11,8 @@ public class RouteActor extends AbstractActor {
     private final int EXECUTERS_NUMBER = 5;
 
     private ActorRef store = getContext().actorOf(
-            Props.create(StoreActor.class)
+            Props.create(StoreActor.class),
+            "storeActor"
     );
     private ActorRef executersPool = getContext().actorOf(
             new RoundRobinPool(EXECUTERS_NUMBER)
