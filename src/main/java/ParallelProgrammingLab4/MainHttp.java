@@ -23,14 +23,12 @@ public class MainHttp {
 
     public Route createRoute() {
         return route(
+                path("results")
                 get(() ->
-                        path("results", () -> {
-            parameter(PACKAGE_ID_PARAM_NAME, packageId -> {
-                Future<Object> result = Patterns.ask(system.actorSelection(PATH_TO_ROUTE_ACTOR), new GetMessage(packageId), 10000);
-                return completeOKWithFuture(result, Jackson.marshaller());
-            }
-        } )
-                        )),
+                        parameter(PACKAGE_ID_PARAM_NAME, packageId -> {
+                            Future<Object> result = Patterns.ask(system.actorSelection(PATH_TO_ROUTE_ACTOR), new GetMessage(packageId), 10000);
+                            return completeOKWithFuture(result, Jackson.marshaller());
+                })),
                 post(() ->
                         entity(Jackson.unmarshaller(TestFunctionMessage.class), msg -> {
                             system.actorSelection(PATH_TO_ROUTE_ACTOR).tell(msg, ActorRef.noSender());
