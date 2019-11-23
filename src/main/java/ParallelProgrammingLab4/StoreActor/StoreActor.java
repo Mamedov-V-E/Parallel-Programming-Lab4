@@ -24,7 +24,7 @@ public class StoreActor extends AbstractActor {
                     System.out.println("storeActor received message: " + m.toString());
                 })
                 .match(GetMessage.class, req -> {
-                        
+                    Optional<List<Result>> optionalList = Optional.ofNullable(store.get(req.getKey()));
                     sender().tell(
                                     new ReturnByKeyMessage(req.getKey(), store.get(req.getKey())), self())
                 }
