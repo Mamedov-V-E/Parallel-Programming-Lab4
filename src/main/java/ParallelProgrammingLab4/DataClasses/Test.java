@@ -8,8 +8,6 @@ public class Test {
     private String expectedResult;
     private Object[] params;
 
-    public Test() {}
-
     public Test(String testName, String expectedResult, Object[] params) {
         this.testName = testName;
         this.expectedResult = expectedResult;
