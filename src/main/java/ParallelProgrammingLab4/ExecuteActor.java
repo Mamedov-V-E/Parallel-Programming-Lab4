@@ -1,8 +1,6 @@
 package ParallelProgrammingLab4;
 
-import ParallelProgrammingLab4.StoreActor.StoreMessage;
 import akka.actor.AbstractActor;
-import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
 
 import javax.script.Invocable;
 import javax.script.ScriptEngine;

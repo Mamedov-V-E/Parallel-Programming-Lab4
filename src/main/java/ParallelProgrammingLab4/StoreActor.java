@@ -1,9 +1,7 @@
-package ParallelProgrammingLab4.StoreActor;
+package ParallelProgrammingLab4;
 
-import ParallelProgrammingLab4.Result;
 import akka.actor.AbstractActor;
 import akka.japi.pf.ReceiveBuilder;
-import javafx.beans.property.ReadOnlyBooleanWrapper;
 
 import java.util.*;
 

@@ -1,6 +1,5 @@
 package ParallelProgrammingLab4;
 
-import ParallelProgrammingLab4.StoreActor.StoreActor;
 import akka.NotUsed;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
@@ -14,7 +13,6 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
 import java.io.IOException;
-import java.rmi.server.ExportException;
 import java.util.concurrent.CompletionStage;
 
 public class AkkaApp {

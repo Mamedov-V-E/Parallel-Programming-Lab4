@@ -1,4 +1,4 @@
-package ParallelProgrammingLab4.StoreActor;
+package ParallelProgrammingLab4;
 
 import ParallelProgrammingLab4.Result;
 

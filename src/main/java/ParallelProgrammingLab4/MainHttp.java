@@ -1,20 +1,11 @@
 package ParallelProgrammingLab4;
 
-import ParallelProgrammingLab4.StoreActor.GetMessage;
-import ParallelProgrammingLab4.StoreActor.ReturnByKeyMessage;
-import ParallelProgrammingLab4.StoreActor.StoreActor;
-import akka.NotUsed;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.http.javadsl.server.Route;
 import akka.pattern.Patterns;
-import akka.stream.javadsl.Flow;
 import scala.concurrent.Future;
-
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.util.regex.Pattern;
 
 import static akka.http.javadsl.server.Directives.*;
 

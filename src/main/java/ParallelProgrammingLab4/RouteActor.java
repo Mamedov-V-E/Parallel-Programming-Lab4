@@ -1,7 +1,5 @@
 package ParallelProgrammingLab4;
 
-import ParallelProgrammingLab4.StoreActor.GetMessage;
-import ParallelProgrammingLab4.StoreActor.StoreActor;
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.actor.Props;

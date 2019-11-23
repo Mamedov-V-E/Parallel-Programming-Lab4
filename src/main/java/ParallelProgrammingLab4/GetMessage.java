@@ -1,4 +1,4 @@
-package ParallelProgrammingLab4.StoreActor;
+package ParallelProgrammingLab4;
 
 public class GetMessage {
     private String key;
