@@ -1,4 +1,4 @@
-package ParallelProgrammingLab4;
+package ParallelProgrammingLab4.Messages;
 
 import ParallelProgrammingLab4.Result;
 

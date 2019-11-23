@@ -1,4 +1,7 @@
-package ParallelProgrammingLab4;
+package ParallelProgrammingLab4.Messages;
+
+import ParallelProgrammingLab4.Function;
+import ParallelProgrammingLab4.Test;
 
 public class ExecuteTestMessage {
     private final Function function;

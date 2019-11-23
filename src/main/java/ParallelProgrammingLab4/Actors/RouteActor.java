@@ -1,9 +1,9 @@
 package ParallelProgrammingLab4.Actors;
 
-import ParallelProgrammingLab4.ExecuteTestMessage;
-import ParallelProgrammingLab4.GetMessage;
+import ParallelProgrammingLab4.Messages.ExecuteTestMessage;
+import ParallelProgrammingLab4.Messages.GetMessage;
 import ParallelProgrammingLab4.Test;
-import ParallelProgrammingLab4.TestFunctionMessage;
+import ParallelProgrammingLab4.Messages.TestFunctionMessage;
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.actor.Props;

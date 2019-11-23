@@ -1,4 +1,4 @@
-package ParallelProgrammingLab4;
+package ParallelProgrammingLab4.Messages;
 
 public class GetMessage {
     private String key;
