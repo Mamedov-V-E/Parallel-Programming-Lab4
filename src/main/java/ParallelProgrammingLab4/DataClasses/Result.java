@@ -11,6 +11,8 @@ public class Result {
     private boolean isSuccessful;
     private Object[] params;
 
+    public Result() {}
+
     public Result(String testName, String expectedResult, String result, boolean isSuccessful, Object[] params) {
         this.testName = testName;
         this.expectedResult = expectedResult;
