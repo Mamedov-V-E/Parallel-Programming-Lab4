@@ -1,5 +1,6 @@
 package ParallelProgrammingLab4.Actors;
 
+import ParallelProgrammingLab4.AkkaApp;
 import ParallelProgrammingLab4.Messages.ExecuteTestMessage;
 import ParallelProgrammingLab4.Messages.GetMessage;
 import ParallelProgrammingLab4.DataClasses.Test;
@@ -14,7 +15,7 @@ public class RouteActor extends AbstractActor {
 
     private ActorRef store = getContext().actorOf(
             Props.create(StoreActor.class),
-            "storeActor"
+            AkkaApp.STORE_ACTOR_NAME
     );
     private ActorRef executersPool = getContext().actorOf(
             new RoundRobinPool(EXECUTERS_NUMBER)

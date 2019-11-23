@@ -1,5 +1,6 @@
 package ParallelProgrammingLab4.Actors;
 
+import ParallelProgrammingLab4.AkkaApp;
 import ParallelProgrammingLab4.DataClasses.Function;
 import ParallelProgrammingLab4.DataClasses.Result;
 import ParallelProgrammingLab4.DataClasses.Test;
@@ -12,7 +13,8 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
 public class ExecuteActor extends AbstractActor {
-    private final String PATH_TO_STORE_ACTOR = "/user/" + "routeActor" + "/" + "storeActor";
+    private final String PATH_TO_STORE_ACTOR = "/user/" + AkkaApp.ROUTE_ACTOR_NAME + "/" + AkkaApp.STORE_ACTOR_NAME;
+
     public Receive createReceive() {
         return receiveBuilder().create()
                 .match(ExecuteTestMessage.class, m -> {
