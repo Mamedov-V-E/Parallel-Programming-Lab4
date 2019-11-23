@@ -13,12 +13,12 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
 public class ExecuteActor extends AbstractActor {
-    private static String 
+    private static final String ENGINE_NAME = "nashorn";
 
     public Receive createReceive() {
         return receiveBuilder().create()
                 .match(ExecuteTestMessage.class, m -> {
-                    ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
+                    ScriptEngine engine = new ScriptEngineManager().getEngineByName(ENGINE_NAME);
                     Function func = m.getFunction();
                     Test test = m.getTest();
                     String result;
