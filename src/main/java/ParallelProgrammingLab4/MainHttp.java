@@ -12,6 +12,9 @@ import scala.concurrent.Future;
 import static akka.http.javadsl.server.Directives.*;
 
 public class MainHttp {
+    private static final String PACKAGE_ID_PARAM_NAME = "packageId";
+    private static final String PATH_TO_ROUTE_ACTOR = "routeActor";
+
     private ActorSystem system;
 
     public MainHttp(ActorSystem system) {
@@ -21,7 +24,7 @@ public class MainHttp {
     public Route createRoute() {
         return route(
                 get(() ->
-                        parameter("packageId", packageId -> {
+                        parameter(PACKAGE_ID_PARAM_NAME, packageId -> {
                             Future<Object> result = Patterns.ask(system.actorSelection("route_actor"), new GetMessage(packageId), 10000);
                             return completeOKWithFuture(result, Jackson.marshaller());
                 })),
