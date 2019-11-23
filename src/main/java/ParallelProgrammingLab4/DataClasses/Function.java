@@ -32,10 +32,6 @@ public class Function {
         this.packageId = packageId;
     }
 
-    public void setJsScript(String jsScript) {
-        this.jsScript = jsScript;
-    }
-
     public void setFunctionName(String functionName) {
         this.functionName = functionName;
     }
