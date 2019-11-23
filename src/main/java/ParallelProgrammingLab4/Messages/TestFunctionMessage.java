@@ -4,8 +4,8 @@ import ParallelProgrammingLab4.DataClasses.Function;
 import ParallelProgrammingLab4.DataClasses.Test;
 
 public class TestFunctionMessage {
-    private final Function function;
-    private final Test[] tests;
+    private Function function;
+    private Test[] tests;
 
     public TestFunctionMessage(Function function, Test[] tests) {
         this.function = function;

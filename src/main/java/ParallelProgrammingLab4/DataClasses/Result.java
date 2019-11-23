@@ -6,11 +6,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @JsonAutoDetect
 public class Result {
 
-    private final String testName;
-    private final String expectedResult;
-    private final String result;
-    private final boolean isSuccessful;
-    private final Object[] params;
+    private String testName;
+    private String expectedResult;
+    private String result;
+    private boolean isSuccessful;
+    private Object[] params;
 
     public Result(String testName, String expectedResult, String result, boolean isSuccessful, Object[] params) {
         this.testName = testName;
