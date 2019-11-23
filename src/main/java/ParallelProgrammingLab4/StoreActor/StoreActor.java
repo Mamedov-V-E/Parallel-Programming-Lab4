@@ -23,8 +23,11 @@ public class StoreActor extends AbstractActor {
                     }
                     System.out.println("storeActor received message: " + m.toString());
                 })
-                .match(GetMessage.class, req -> sender().tell(
-                        new ReturnByKeyMessage(req.getKey(), store.get(req.getKey())), self())
+                .match(GetMessage.class, req -> {
+                        
+                    sender().tell(
+                                    new ReturnByKeyMessage(req.getKey(), store.get(req.getKey())), self())
+                }
                 ).build();
     }
 }
