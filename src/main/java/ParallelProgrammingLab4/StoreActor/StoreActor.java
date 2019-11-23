@@ -25,6 +25,9 @@ public class StoreActor extends AbstractActor {
                 })
                 .match(GetMessage.class, req -> {
                     Optional<List<Result>> optionalList = Optional.ofNullable(store.get(req.getKey()));
+                    if (optionalList.isPresent()) {
+                        
+                    }
                     sender().tell(
                                     new ReturnByKeyMessage(req.getKey(), store.get(req.getKey())), self())
                 }
