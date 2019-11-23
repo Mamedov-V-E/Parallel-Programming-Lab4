@@ -14,6 +14,7 @@ import javax.script.ScriptEngineManager;
 
 public class ExecuteActor extends AbstractActor {
     private static final String ENGINE_NAME = "nashorn";
+    private static final String ERROR_MESSAGE = "Runtime error during running test";
 
     public Receive createReceive() {
         return receiveBuilder().create()
