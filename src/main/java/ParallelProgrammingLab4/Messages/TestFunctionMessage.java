@@ -1,7 +1,7 @@
 package ParallelProgrammingLab4.Messages;
 
-import ParallelProgrammingLab4.Function;
-import ParallelProgrammingLab4.Test;
+import ParallelProgrammingLab4.DataClasses.Function;
+import ParallelProgrammingLab4.DataClasses.Test;
 
 public class TestFunctionMessage {
     private final Function function;

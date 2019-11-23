@@ -1,6 +1,8 @@
 package ParallelProgrammingLab4.Actors;
 
-import ParallelProgrammingLab4.*;
+import ParallelProgrammingLab4.DataClasses.Function;
+import ParallelProgrammingLab4.DataClasses.Result;
+import ParallelProgrammingLab4.DataClasses.Test;
 import ParallelProgrammingLab4.Messages.ExecuteTestMessage;
 import ParallelProgrammingLab4.Messages.StoreMessage;
 import akka.actor.AbstractActor;

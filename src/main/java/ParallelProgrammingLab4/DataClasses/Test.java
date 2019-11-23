@@ -1,4 +1,4 @@
-package ParallelProgrammingLab4;
+package ParallelProgrammingLab4.DataClasses;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 

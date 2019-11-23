@@ -1,7 +1,7 @@
 package ParallelProgrammingLab4.Actors;
 
 import ParallelProgrammingLab4.Messages.GetMessage;
-import ParallelProgrammingLab4.Result;
+import ParallelProgrammingLab4.DataClasses.Result;
 import ParallelProgrammingLab4.Messages.ReturnByKeyMessage;
 import ParallelProgrammingLab4.Messages.StoreMessage;
 import akka.actor.AbstractActor;

@@ -1,6 +1,6 @@
 package ParallelProgrammingLab4.Messages;
 
-import ParallelProgrammingLab4.Result;
+import ParallelProgrammingLab4.DataClasses.Result;
 
 import java.util.List;
 

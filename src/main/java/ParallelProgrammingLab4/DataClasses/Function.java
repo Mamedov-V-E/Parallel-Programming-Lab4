@@ -1,4 +1,4 @@
-package ParallelProgrammingLab4;
+package ParallelProgrammingLab4.DataClasses;
 
 public class Function {
     private final String packageId;
