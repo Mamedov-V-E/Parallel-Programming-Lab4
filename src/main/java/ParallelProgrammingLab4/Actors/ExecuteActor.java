@@ -13,7 +13,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
 public class ExecuteActor extends AbstractActor {
-    private final String PATH_TO_STORE_ACTOR = "/user/" + AkkaApp.ROUTE_ACTOR_NAME + "/" + AkkaApp.STORE_ACTOR_NAME;
+
 
     public Receive createReceive() {
         return receiveBuilder().create()
@@ -31,7 +31,7 @@ public class ExecuteActor extends AbstractActor {
                         result = "ERROR";
                     }
 
-                    getContext().actorSelection(PATH_TO_STORE_ACTOR)
+                    getContext().actorSelection(AkkaApp.PATH_TO_STORE_ACTOR)
                             .tell(new StoreMessage(func.getPackageId(), new Result(
                                                                                 test.getTestName(),
                                                                                 test.getExpectedResult(),

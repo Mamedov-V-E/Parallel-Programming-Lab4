@@ -20,6 +20,8 @@ public class AkkaApp {
     public static final String ACTOR_SYSTEM_NAME = "testerSystem";
     public static final String ROUTE_ACTOR_NAME = "routeActor";
     public static final String STORE_ACTOR_NAME = "storeActor";
+    public static final String PATH_TO_STORE_ACTOR = "/user/" + AkkaApp.ROUTE_ACTOR_NAME + "/" + AkkaApp.STORE_ACTOR_NAME;
+    public static final String PATH_TO_ROUTE_ACTOR = "/user/" + AkkaApp.ROUTE_ACTOR_NAME;
     public static final String HOST_NAME = "localhost";
     public static final int PORT_NUMBER = 8080;
 
