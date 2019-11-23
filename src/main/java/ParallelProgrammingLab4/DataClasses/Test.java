@@ -4,9 +4,9 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 @JsonAutoDetect
 public class Test {
-    private String testName;
-    private String expectedResult;
-    private Object[] params;
+    private final String testName;
+    private final String expectedResult;
+    private final Object[] params;
 
     public Test(String testName, String expectedResult, Object[] params) {
         this.testName = testName;

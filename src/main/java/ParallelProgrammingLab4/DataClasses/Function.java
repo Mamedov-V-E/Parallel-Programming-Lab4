@@ -4,9 +4,9 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 @JsonAutoDetect
 public class Function {
-    private String packageId;
-    private String jsScript;
-    private String functionName;
+    private final String packageId;
+    private final String jsScript;
+    private final String functionName;
 
     public Function(String packageId, String jsScript, String functionName) {
         this.packageId = packageId;
