@@ -17,11 +17,11 @@ import java.io.IOException;
 import java.util.concurrent.CompletionStage;
 
 public class AkkaApp {
-    private static final String ACTOR_SYSTEM_NAME = "testerSystem";
-    private static final String ROUTE_ACTOR_NAME = "routeActor";
-    private static final String STORE_ACTOR_NAME = "storeActor";
-    private static final String HOST_NAME = "localhost";
-    private static final int PORT_NUMBER = 8080;
+    public static final String ACTOR_SYSTEM_NAME = "testerSystem";
+    public static final String ROUTE_ACTOR_NAME = "routeActor";
+    public static final String STORE_ACTOR_NAME = "storeActor";
+    public static final String HOST_NAME = "localhost";
+    public static final int PORT_NUMBER = 8080;
 
     public static void main(String[] args) throws IOException {
         ActorSystem system = ActorSystem.create(ACTOR_SYSTEM_NAME);

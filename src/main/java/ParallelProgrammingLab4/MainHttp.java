@@ -13,7 +13,7 @@ import static akka.http.javadsl.server.Directives.*;
 
 public class MainHttp {
     private static final String PACKAGE_ID_PARAM_NAME = "packageId";
-    private static final String PATH_TO_ROUTE_ACTOR = "routeActor";
+    private static final String PATH_TO_ROUTE_ACTOR = "/user/" + AkkaApp.ROUTE_ACTOR_NAME;
 
     private ActorSystem system;
 
