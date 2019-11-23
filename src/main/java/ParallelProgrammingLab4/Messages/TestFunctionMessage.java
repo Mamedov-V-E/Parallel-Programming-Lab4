@@ -22,12 +22,4 @@ public class TestFunctionMessage {
     public Test[] getTests() {
         return tests;
     }
-
-    public void setFunction(Function function) {
-        this.function = function;
-    }
-
-    public void setTests(Test[] tests) {
-        this.tests = tests;
-    }
 }
