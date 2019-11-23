@@ -1,5 +1,6 @@
-package ParallelProgrammingLab4;
+package ParallelProgrammingLab4.Actors;
 
+import ParallelProgrammingLab4.*;
 import akka.actor.AbstractActor;
 
 import javax.script.Invocable;

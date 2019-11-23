@@ -1,5 +1,9 @@
-package ParallelProgrammingLab4;
+package ParallelProgrammingLab4.Actors;
 
+import ParallelProgrammingLab4.GetMessage;
+import ParallelProgrammingLab4.Result;
+import ParallelProgrammingLab4.ReturnByKeyMessage;
+import ParallelProgrammingLab4.StoreMessage;
 import akka.actor.AbstractActor;
 import akka.japi.pf.ReceiveBuilder;
 
