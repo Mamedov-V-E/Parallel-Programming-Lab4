@@ -1,5 +1,8 @@
 package ParallelProgrammingLab4.DataClasses;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+@JsonAutoDetect
 public class Function {
     private final String packageId;
     private final String jsScript;
