@@ -32,7 +32,7 @@ public class RouteActor extends AbstractActor {
                     }
                 })
                 .match(GetMessage.class, m -> {
-                    System.out.println("");
+                    System.out.println("GetMessage request recived by routeActor");
                     store.forward(m, getContext());
                 })
                 .build();

@@ -19,6 +19,7 @@ public class ExecuteActor extends AbstractActor {
     public Receive createReceive() {
         return receiveBuilder().create()
                 .match(ExecuteTestMessage.class, m -> {
+                    System.out.println("ExecuteTestMessage with test named \"" + m.getTest().getTestName() +"\" request recived by executeActor");
                     ScriptEngine engine = new ScriptEngineManager().getEngineByName(ENGINE_NAME);
                     Function func = m.getFunction();
                     Test test = m.getTest();

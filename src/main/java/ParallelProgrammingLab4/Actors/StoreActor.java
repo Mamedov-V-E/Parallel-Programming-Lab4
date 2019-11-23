@@ -10,6 +10,7 @@ import akka.japi.pf.ReceiveBuilder;
 import java.util.*;
 
 public class StoreActor extends AbstractActor {
+    private static final String NOT_FOUND_MESSAGE = "result not found\n";
 
     private Map<String, List<Result>> store = new HashMap<>();
     @Override
@@ -27,11 +28,12 @@ public class StoreActor extends AbstractActor {
                     System.out.println("storeActor received message: " + m.toString());
                 })
                 .match(GetMessage.class, req -> {
+                    System.out.println("GetMessage request recived by storeActor");
                     Optional<List<Result>> optionalList = Optional.ofNullable(store.get(req.getKey()));
                     if (optionalList.isPresent()) {
                         sender().tell(new ReturnByKeyMessage(req.getKey(), store.get(req.getKey())), self());
                     } else {
-                        sender().tell("result not found\n", self());
+                        sender().tell(NOT_FOUND_MESSAGE, self());
                     }
                 }
                 ).build();
