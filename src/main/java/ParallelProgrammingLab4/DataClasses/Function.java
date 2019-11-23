@@ -27,4 +27,16 @@ public class Function {
     public String getFunctionName() {
         return functionName;
     }
+
+    public void setPackageId(String packageId) {
+        this.packageId = packageId;
+    }
+
+    public void setJsScript(String jsScript) {
+        this.jsScript = jsScript;
+    }
+
+    public void setFunctionName(String functionName) {
+        this.functionName = functionName;
+    }
 }
