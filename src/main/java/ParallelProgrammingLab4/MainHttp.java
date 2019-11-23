@@ -23,7 +23,6 @@ public class MainHttp {
 
     public Route createRoute() {
         return route(
-                path()
                 path("results", () -> {
                     get(() ->
                             parameter(PACKAGE_ID_PARAM_NAME, packageId -> {
