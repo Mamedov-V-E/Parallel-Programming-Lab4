@@ -25,6 +25,7 @@ public class RouteActor extends AbstractActor {
     public Receive createReceive() {
         return receiveBuilder().create()
                 .match(TestFunctionMessage.class, m -> {
+                    System.out.println("TestFunctionMessage request recived by routeActor");
                     for (Test test : m.getTests()) {
                         executersPool.tell(new ExecuteTestMessage(
                                             m.getFunction(),
