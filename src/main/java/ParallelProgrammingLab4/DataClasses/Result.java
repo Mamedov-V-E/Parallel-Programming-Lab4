@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @JsonAutoDetect
 public class Result {
-
     private String testName;
     private String expectedResult;
     private String result;
