@@ -28,10 +28,8 @@ public class StoreActor extends AbstractActor {
                     if (optionalList.isPresent()) {
                         sender().tell(new ReturnByKeyMessage(req.getKey(), store.get(req.getKey())), self());
                     } else {
-                        sender().tell("")
+                        sender().tell("result not found\n", self());
                     }
-                    sender().tell(
-                                    new ReturnByKeyMessage(req.getKey(), store.get(req.getKey())), self());
                 }
                 ).build();
     }
