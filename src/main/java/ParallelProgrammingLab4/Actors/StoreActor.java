@@ -25,7 +25,7 @@ public class StoreActor extends AbstractActor {
                         list.add(m.getResult());
                         store.put(m.getKey(), list);
                     }
-                    System.out.println("StoreMessage request for test named \"" + m.getResult().getTestName() + "\"recived by storeActor" + m.toString());
+                    System.out.println("StoreMessage request for test named \"" + m.getResult().getTestName() + "\"recived by storeActor");
                 })
                 .match(GetMessage.class, req -> {
                     System.out.println("GetMessage request recived by storeActor");
