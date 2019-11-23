@@ -10,6 +10,7 @@ import akka.japi.pf.ReceiveBuilder;
 import java.util.*;
 
 public class StoreActor extends AbstractActor {
+
     private Map<String, List<Result>> store = new HashMap<>();
     @Override
     public Receive createReceive() {
