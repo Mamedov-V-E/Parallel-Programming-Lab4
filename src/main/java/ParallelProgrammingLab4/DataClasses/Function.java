@@ -8,6 +8,8 @@ public class Function {
     private String jsScript;
     private String functionName;
 
+    public Function() {}
+
     public Function(String packageId, String jsScript, String functionName) {
         this.packageId = packageId;
         this.jsScript = jsScript;
