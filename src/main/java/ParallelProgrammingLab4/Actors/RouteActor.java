@@ -32,6 +32,7 @@ public class RouteActor extends AbstractActor {
                     }
                 })
                 .match(GetMessage.class, m -> {
+                    System.out.println("");
                     store.forward(m, getContext());
                 })
                 .build();
