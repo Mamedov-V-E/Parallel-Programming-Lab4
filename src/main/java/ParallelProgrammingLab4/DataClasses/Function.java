@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 @JsonAutoDetect
 public class Function {
-    private String packageId;
+    private final String packageId;
     private String jsScript;
     private String functionName;
 
@@ -26,10 +26,6 @@ public class Function {
 
     public String getFunctionName() {
         return functionName;
-    }
-
-    public void setPackageId(String packageId) {
-        this.packageId = packageId;
     }
 
     public void setJsScript(String jsScript) {
